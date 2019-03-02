@@ -1,0 +1,71 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* This is how to do a reset so that we start with a clean bench */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #777;
+  padding: 30px;
+  width: 100%;
+}
+
+.header {
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.699),
+      rgba(40, 180, 133, 0.699)
+    ),
+    url(../img/sunrise.jpg);
+  background-size: contain;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  color: #fff;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 30px;
+}
+.header-text {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header-primary {
+  display: block;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 30px;
+}
+
+.header-secondary {
+  display: block;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 15px;
+}
