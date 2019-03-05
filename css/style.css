@@ -61,6 +61,7 @@ body {
   font-size: 60px;
   font-weight: 700;
   letter-spacing: 30px;
+  animation: flyInFromBottom 1s ease 0s 1 normal forwards;
 }
 
 .header-secondary {
@@ -68,4 +69,33 @@ body {
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 15px;
+  animation: flyInFromTop 1s ease 0s 1 normal forwards;
+}
+
+@keyframes flyInFromBottom {
+  0% {
+    transform: translate(0, 100vh);
+  }
+
+  75% {
+    transform: translate(0, -2.5vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes flyInFromTop {
+  0% {
+    transform: translate(0, -100vh);
+  }
+
+  75% {
+    transform: translate(0, 2.5vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
