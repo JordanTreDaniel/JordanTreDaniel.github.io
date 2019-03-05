@@ -61,17 +61,36 @@ body {
   font-size: 60px;
   font-weight: 700;
   letter-spacing: 30px;
-  animation: flyInFromBottom 1s ease 0s 1 normal forwards;
+  line-height: 100%;
+  animation: flyInFromBottom 1.5s ease 0s 1 normal forwards;
 }
-
 .header-secondary {
   display: block;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 15px;
-  animation: flyInFromTop 1s ease 0s 1 normal forwards;
+  animation: flyInFromTop 1.5s ease 0s 1 normal forwards;
 }
+@keyframes presenting {
+  0% {
+    box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.2);
+  }
 
+  25% {
+    box-shadow: 50px -50px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  50% {
+    box-shadow: 0px -50px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  75% {
+    box-shadow: -50px 50px 20px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 50px 50px 20px rgba(0, 0, 0, 0.2);
+  }
+}
 @keyframes flyInFromBottom {
   0% {
     transform: translate(0, 100vh);
@@ -98,4 +117,66 @@ body {
   100% {
     transform: translate(0, 0);
   }
+}
+@keyframes flyInFromRight {
+  0% {
+    transform: translate(100vw, -100vh);
+  }
+
+  75% {
+    transform: translate(-5px, 5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 27px;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 100px;
+  transition: all 0.2s;
+  /* animation: presenting 4s linear 0s infinite normal forwards running; */
+  position: relative;
+  animation: flyInFromRight 1.5s ease 0.1s 1 normal backwards;
+}
+.btn-white {
+  color: #777;
+  background-color: #fff;
+}
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.2s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(2) scaleY(1.2);
+  opacity: 0;
 }
