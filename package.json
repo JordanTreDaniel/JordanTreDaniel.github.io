@@ -1,0 +1,22 @@
+{
+  "name": "jordantredaniel.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordanTreDaniel/JordanTreDaniel.github.io.git"
+  },
+  "author": "Jordan Christley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JordanTreDaniel/JordanTreDaniel.github.io/issues"
+  },
+  "homepage": "https://github.com/JordanTreDaniel/JordanTreDaniel.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
