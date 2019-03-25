@@ -4,7 +4,6 @@ COLORS:
 Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
-
 */
 /* This is how to do a reset so that we start with a clean bench */
 *,
@@ -25,46 +24,6 @@ body {
   padding: 3rem;
   width: 100%;
   box-sizing: border-box; }
-
-.header {
-  height: 95vh;
-  width: 100%;
-  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.699), rgba(40, 180, 133, 0.699)), url(../img/sunrise.jpg);
-  background-size: contain;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  position: relative;
-  color: #fff; }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 3rem; }
-
-.header__text {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
-.header__primary {
-  display: block;
-  font-size: 6rem;
-  font-weight: 700;
-  letter-spacing: 3rem;
-  line-height: 100%;
-  animation: flyInFromBottom 1.5s ease 0s 1 normal forwards; }
-
-.header__secondary {
-  display: block;
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 1.5rem;
-  animation: flyInFromTop 1.5s ease 0s 1 normal forwards; }
 
 @keyframes presenting {
   0% {
@@ -102,8 +61,7 @@ body {
   100% {
     transform: translate(0, 0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1rem 2.7rem;
@@ -117,6 +75,8 @@ body {
 .btn--white {
   color: #777;
   background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn--animated {
   animation: flyInFromRight 1.5s ease 0.1s 1 normal backwards; }
@@ -124,6 +84,9 @@ body {
 .btn:hover {
   transform: translateY(-0.5rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(2) scaleY(1.2);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-0.3rem);
@@ -141,9 +104,37 @@ body {
   z-index: -1;
   transition: all 0.2s; }
 
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(2) scaleY(1.2);
-  opacity: 0; }
+.header {
+  height: 95vh;
+  width: 100%;
+  background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.699), rgba(40, 180, 133, 0.699)), url(../img/sunrise.jpg);
+  background-size: contain;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  position: relative;
+  color: #fff; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3rem; }
+  .header__text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+  .header__primary {
+    display: block;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 3rem;
+    line-height: 100%;
+    animation: flyInFromBottom 1.5s ease 0s 1 normal forwards; }
+  .header__secondary {
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    animation: flyInFromTop 1.5s ease 0s 1 normal forwards; }
