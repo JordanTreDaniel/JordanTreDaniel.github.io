@@ -1,10 +1,5 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-*/
+/*********** COLORS *************/
+/*********** GRID *************/
 /* This is how to do a reset so that we start with a clean bench */
 *,
 *::after,
@@ -138,3 +133,8 @@ body {
     font-weight: 400;
     letter-spacing: 1.5rem;
     animation: flyInFromTop 1.5s ease 0s 1 normal forwards; }
+
+.row {
+  margin: 0 auto;
+  background-color: #897;
+  width: 100%; }

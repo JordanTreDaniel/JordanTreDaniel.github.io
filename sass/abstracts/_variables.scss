@@ -1,14 +1,12 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-*/
-
+/*********** COLORS *************/
 $primary: #55c57a;
 $primary-light: #7ed56f;
 $primary-dark: #28b485;
 
 $grey-dark: #777;
 $white: #fff;
+
+/*********** GRID *************/
+$max-grid-width: 114rem;
+$gutter-width: 6rem;
+$gutter-vertical: 8rem;
