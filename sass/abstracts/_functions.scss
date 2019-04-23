@@ -1,0 +1,7 @@
+@function width-of-columns($portion, $whole) {
+  $width: calc(
+    #{$portion} * (100% - ((#{$whole} - 1) *#{$gutter-width})) / #{$whole}
+  );
+
+  @return calc(#{$width} + (#{$portion} - 1) * #{$gutter-width});
+}
